@@ -31,7 +31,7 @@ public class JssApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-	    accountService.saveUser(new AppUser(null,"admin","1234",null));
+	/*    accountService.saveUser(new AppUser(null,"admin","1234",null));
         accountService.saveUser(new AppUser(null,"user","1234",null));
 
         accountService.saveRole(new AppRole(null,"ADMIN"));
@@ -43,6 +43,6 @@ public class JssApplication implements CommandLineRunner {
 
         taskRepository.save(new Task(null,"première"));
         taskRepository.save(new Task(null,"seconde"));
-        taskRepository.save(new Task(null,"troisième"));
+        taskRepository.save(new Task(null,"troisième"));*/
     }
 }
