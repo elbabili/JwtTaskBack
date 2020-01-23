@@ -22,15 +22,15 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
         //permet les accès de domaines différent du back
-        response.addHeader("Access-Control-Allow-Origin","*");
+        response.setHeader("Access-Control-Allow-Origin","*");
 
         //Tous les headers autorisés
-        response.addHeader("Access-Control-Allow-Headers",
+        response.setHeader("Access-Control-Allow-Headers",
                 "Origin, Accept, X-Requested-With, Content-Type, " +
                 "Access-Control-Request-Method, Access-Control-Request-Headers, Authorization");
 
         //Tous les headers exposés donc visible côté front
-        response.addHeader("Access-Control-Expose-Headers",
+        response.setHeader("Access-Control-Expose-Headers",
                 "Access-Control-Allow-Origin, Access-Control-Allow-Credentials, Authorization");
 
         if(request.getMethod().equals("OPTIONS")){  //si la requete contient une OPTION renvoyer OK -- côté front : Authorization
